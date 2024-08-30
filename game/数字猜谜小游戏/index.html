@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./index.css">
+    <title>数字猜谜游戏</title>
+  </head>
+
+  <body>
+    <h1>数字猜谜游戏</h1>
+
+    <p>我们选择一个1到100之间的随机数。看看你是否能在10圈或更少的时间内猜到它。我们会告诉你你的猜测结果太高还是太低。</p>
+
+    <div class="form">
+      <label for="guessWord">输入一个数字: </label>
+      <input type="number" value="" min="1" max="100" required id="guessField" class="guessField">
+      <input type="submit" value="确认" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="count"></p>
+      <p class="result"></p>
+      <p class="clue"></p>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
