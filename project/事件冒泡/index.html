@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      width: 50%;
+      max-width: 800px;
+      min-width: 480px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <button id="myButton">点我！</button>
+  </div>
+  <pre id="output"></pre>
+
+  <script>
+    const output = document.querySelector("#output");
+
+    function handleClick(e) {
+      output.textContent += `你在 ${e.target.tagName} 元素上进行了点击\n`;
+      console.log(e.target); // 打印出触发事件的元素  
+      console.log(e.type);   // 打印出事件的类型，例如 "click"
+    }
+
+    const button = document.querySelector("#myButton");
+    button.addEventListener("click", handleClick);
+  </script>
+
+</body>
+
+</html>
