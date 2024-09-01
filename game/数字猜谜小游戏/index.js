@@ -25,7 +25,7 @@ function checkGuess() {
   console.log(userGuess)
 
   // textContent和innerHtml类似, textContent只返回或设置纯文本内容, innerHtml返回或设置HTML字符串
-  // 实现了不覆盖原先内容
+  // 实现了不覆盖原先内容(原理: 首先判断猜测次数是否为1, 为1则覆盖guesses.textContent的内容, 不为1则继续用字符串拼接, 旧内容串上新内容)
   if (guessCount === 1) {
     guesses.textContent = "之前的猜测：";
   }
